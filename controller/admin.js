@@ -10,17 +10,18 @@ router.post('/register-admin', async (req, res) =>{
     const password = req.body.password;
     const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
     req.body.password = hashedPassword;
-
+    console.log('hit register route')
     try{
         const createdAdmin = await Admin.create(req.body);
-        req.sessions.adminId = createdAdmin._id;
+        console.log(createdAdmin, 'this is created Admin');
+        req.session.adminId = createdAdmin._id;
         req.session.username = createdAdmin.username;
         req.session.logged = true;
         res.json({
             data: createdAdmin
         })
     }catch(err){
-        res.send(err)
+        console.log(err, 'this is error')
     }
 })
 
