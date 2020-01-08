@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const dataSchema = new mongoose.Schema({
-  label: String,
+  pillar: String,
 	indicator: String,
 	location: String,
 	group: String,
@@ -9,7 +9,7 @@ const dataSchema = new mongoose.Schema({
 	val2013: String,
 	val2017: String,
 	val2020: String,
-	outcome: String
+	trend: String
 })
 
 const Data = mongoose.model('Data', dataSchema)
