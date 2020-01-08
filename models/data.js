@@ -6,9 +6,9 @@ const dataSchema = new mongoose.Schema({
 	location: String,
 	group: String,
 	source: String,
-	val2013: Number,
-	val2017: Number,
-	val2020: Number,
+	val2013: String,
+	val2017: String,
+	val2020: String,
 	outcome: String
 })
 
