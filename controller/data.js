@@ -21,7 +21,6 @@ router.post('/add-data', async (req,res) =>{
 
 //get data 
 router.get('/get-data', async (req,res)=>{
-  console.log('this is working')
     try{
         const foundData = await Data.find({})
         res.json({
