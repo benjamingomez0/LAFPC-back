@@ -9,7 +9,7 @@ const dataSchema = new mongoose.Schema({
 	val2013: String,
 	val2017: String,
 	val2020: String,
-	trend: String
+	outcome: String
 })
 
 const Data = mongoose.model('Data', dataSchema)
