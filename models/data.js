@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const dataSchema = new mongoose.Schema({
-  type: String,
+  pillar: String,
 	indicator: String,
 	location: String,
 	group: String,
