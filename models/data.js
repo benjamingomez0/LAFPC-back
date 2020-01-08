@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const dataSchema = new mongoose.Schema({
-  indicator: String,
-  baseline:  String,
-  update:   [ String ],
-  sources: String,
-  change: String,
-  notes: String,
-  dataStatus: String,
-  group: String,
-  value: String,
+  type: String,
+	indicator: String,
+	location: String,
+	group: String,
+	source: String,
+	val2013: Number,
+	val2017: Number,
+	val2020: Number,
+	outcome: String
 })
 
 const Data = mongoose.model('Data', dataSchema)
